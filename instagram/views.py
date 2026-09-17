@@ -8,5 +8,5 @@ from .serializers import UserProfileSerializer
 
 class UserProfileViewSet(ModelViewSet):
     serializer_class = UserProfileSerializer
-    queryset = UserProfile.objects.all()
+    queryset = UserProfile.objects.all().select_related("user")
     pagination_class = PageNumberPagination
