@@ -72,3 +72,4 @@ class Comment(Base):
         on_delete=models.CASCADE,
         related_name="comments",
     )
+    text = models.TextField(max_length=1000, default="Hello")
